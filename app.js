@@ -5,6 +5,15 @@ const day = now.getDay();
 const hour = now.getHours();
 const min = now.getMinutes();
 
-console.log(now)
-console.log(day)
-console.log(hour, min);
+
+
+const winning = (d, h, m) => {
+    console.log(d, h, m);
+
+    d === 6 ? console.log(true) : console.log(false);
+};
+
+
+
+
+winning(day, hour, min);
