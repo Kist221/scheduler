@@ -5,12 +5,15 @@ const day = now.getDay();
 const hour = now.getHours();
 const min = now.getMinutes();
 
-
-
 const winning = (d, h, m) => {
     console.log(d, h, m);
-
-    d === 6 ? console.log(true) : console.log(false);
+    // if mon-fri
+    // && because || returns 0 as true
+    if (d > 0 && d < 6) {
+        console.log(true)
+    } else {
+        console.log(false);
+    }
 };
 
 
