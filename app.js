@@ -11,30 +11,32 @@ const closed = {
     weekday: 18,
     saturday: 16
 }
-console.log(now);
-console.log(current.day, current.hour, current.min);
+const logMe = `${now}
+Day: ${current.day}, Time: ${current.hour}:${current.min}`;
+
+console.log(logMe);
 
 // check if closed on weekday
 const weekTime = (h, closed) => {
     // if before 6am && past 6pm
     if (h < 6 || h > closed) {
         console.log('closed');
-        // TODO: display message on page
+        $('#offHours').show();
     } else {
         // DO NOTHING
-        console.log('open', h, closed);
+        console.log('open');
     }
 };
 
 // check if closed on Saturday
 const satTime = (h, closed) => {
-    // if before 6am && past 6pm
+    // if before 6am && past 4pm
     if (h < 6 || h > closed) {
         console.log('closed');
-        // TODO: display message on page
+        $('#offHours').show();
     } else {
         // DO NOTHING
-        console.log('open', h, closed);
+        console.log('open');
     }
 };
 
@@ -52,7 +54,8 @@ const winning = (d, h, m) => {
     }
     // sunday
     else if (d === 0) {
-        console.log('sunday');
+        console.log('sunday - closed');
+        $('#offHours').show();
     }
 };
 
