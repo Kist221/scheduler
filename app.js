@@ -1,18 +1,22 @@
-const now = new Date();
-// day = 0-6 (sun-sat)
+// BIZ HOURS CHANGE AS NEEDED - closed weekdays @ 6 && sat @ 4?
 // hour = (24 hours / 0-23)
+const closed = {
+    weekday: 18,
+    saturday: 16
+}
+// ==========================================
+// vvv NO TOUCH! vvv
+// ==========================================
+const now = new Date();
 const current = {
     day: now.getDay(),
     hour: now.getHours(),
     min: now.getMinutes()
 }
-// BIZ HOURS - closed weekdays @ 6 && sat @ 4?
-const closed = {
-    weekday: 18,
-    saturday: 16
-}
-const logMe = `${now}
-Day: ${current.day}, Time: ${current.hour}:${current.min}`;
+const logMe = (
+    `${now}
+    Day: ${current.day}, Time: ${current.hour}:${current.min}`
+);
 
 console.log(logMe);
 
@@ -41,6 +45,7 @@ const satTime = (h, closed) => {
 };
 
 // determines day - input day, hour, min
+// day = 0-6 (sun-sat)
 const winning = (d, h, m) => {
     // mon-fri
     if (d > 0 && d < 6) {
