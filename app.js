@@ -4,6 +4,13 @@ const closed = {
     weekday: 18,
     saturday: 16
 }
+
+// TODO:
+// Add Sunday scheduling
+
+// TODO:
+// Refactor for opening hours
+
 // ==========================================
 // vvv NO TOUCH! vvv
 // ==========================================
@@ -14,7 +21,8 @@ const current = {
     min: now.getMinutes()
 }
 const logMe = (
-    `${now}
+    `TIME RAN:
+    ${now}
     Day: ${current.day}, Time: ${current.hour}:${current.min}`
 );
 
