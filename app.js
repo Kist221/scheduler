@@ -33,7 +33,7 @@ const weekTime = (h, closed) => {
     // if before 6am && past 6pm
     if (h < 6 || h > closed) {
         console.log('closed');
-        $('#offHours').show();
+        jQuery('#offHours').show();
     } else {
         // DO NOTHING
         console.log('open');
@@ -45,7 +45,7 @@ const satTime = (h, closed) => {
     // if before 6am && past 4pm
     if (h < 6 || h > closed) {
         console.log('closed');
-        $('#offHours').show();
+        jQuery('#offHours').show();
     } else {
         // DO NOTHING
         console.log('open');
@@ -68,7 +68,7 @@ const winning = (d, h, m) => {
     // sunday
     else if (d === 0) {
         console.log('sunday - closed');
-        $('#offHours').show();
+        jQuery('#offHours').show();
     }
 };
 
