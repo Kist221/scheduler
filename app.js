@@ -31,7 +31,7 @@ console.log(logMe);
 // check if closed on weekday
 const weekTime = (h, closed) => {
     // if before 6am && past 6pm
-    if (h < 6 || h > closed) {
+    if (h < 6 || h >= closed) {
         console.log('closed');
         jQuery('#offHours').show();
     } else {
@@ -43,7 +43,7 @@ const weekTime = (h, closed) => {
 // check if closed on Saturday
 const satTime = (h, closed) => {
     // if before 6am && past 4pm
-    if (h < 6 || h > closed) {
+    if (h < 6 || h >= closed) {
         console.log('closed');
         jQuery('#offHours').show();
     } else {
